@@ -1,0 +1,352 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --lightgray: #afafaf;
+  --gray: rgb(238, 235, 235);
+  --darkGray: #555555;
+  --primary2: #f1d014;
+  --primary: #39a6a3;
+}
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+}
+
+/*Nav bar */
+.nav-bar-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  padding-top: 10px;
+  border-bottom: 1px solid var(--white);
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+.nav-bar-container .logo img{
+  width:30px;
+  margin-left: 10px;
+}
+
+.nav-bar-container a {
+  text-decoration: none;
+  padding: 4px;
+  padding-left: 6px;
+  color: var(--white);
+  font-size: 0.8rem;
+}
+.nav-bar-container span {
+  font-size: 0.8rem;
+  padding-right: 6px;
+  color: var(--primary);
+  font-weight: 500;
+}
+.nav-bar-container a:hover {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.nav-bar-container input {
+  width: 50px;
+  height: 20px;
+}
+.nav-bar-container button {
+  background: none;
+  border: none;
+  color: var(--white);
+}
+/*Location*/
+.location {
+  margin: 0 auto;
+  border: 5px solid var(--gray);
+}
+.location iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Contact */
+
+.contact {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .right,
+.left {
+  padding: 20px;
+}
+
+.left .title,
+.right .title {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.left .lmp {
+  width: 290;
+}
+.imp h3 {
+  font-size: 1.25rem;
+  color: var(--black);
+  font-weight: 500;
+}
+.lmp p {
+  font-size: 1rem;
+  color: var(--lightgray);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.right .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+  margin-bottom: 20px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--lightgray);
+  font-size: 1rem;
+}
+
+.contact .contact-form ::placeholder {
+  text-transform: capitalize;
+  color: var(--darkGray);
+}
+.contact .contact-form textarea {
+  resize: none;
+}
+
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-form button {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  transition: all 0.33s ease;
+  cursor: pointer;
+  width: 80px;
+}
+.contact .contact-form button:hover {
+  background-color: var(--black);
+}
+
+/* Footer*/
+.footer {
+    border-top: 1px solid var(--gray);
+}
+.semi-Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Alkayan-section,
+.contact-section,
+.links-section,
+.follow-section {
+  margin: 0 auto;
+  width: 250px;
+}
+.Alkayan-section h2,
+.contact-section h2,
+.links-section h2,
+.follow-section h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+.Alkayan-section p,
+.contact-section p {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--black);
+  text-align: justify;
+}
+.contact-section span {
+  color: var(--lightgray);
+}
+
+.links-section a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+.follow-section .social span {
+  font-size: 2rem;
+  padding-right: 12px;
+  color: var(--black);
+}
+
+
+.footer-title {
+  padding: 20px;
+  text-align: center;
+}
+.footer span {
+  color: var(--darkGray);
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
+.footer a {
+  color: var(--darkGray);
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (min-width: 1000px) {
+  /* Nav bar */
+  .nav-bar-container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  }
+
+  .nav-bar-container a {
+    padding: 10px;
+    font-size: 1.25rem;
+    margin-left: 40px;
+  }
+  .nav-bar-container .logo img{
+    width:50px;
+    margin-left: 20px;
+}
+  .nav-bar-container span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+
+  .nav-bar-container a:hover {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .nav-bar-container input {
+    width: 100px;
+  }
+
+  /* Contact */
+
+  .contact {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px;
+    
+  }
+
+  .contact .right,
+  .left {
+    padding: 20px;
+    width: 450px;
+  }
+  .left .title,
+  .right .title {
+    font-size: 2rem;
+  }
+  .lmp h3 {
+    font-size: 1.5rem;
+    color: var(--black);
+    font-weight: 500;
+  }
+  .lmp p {
+    font-size: 1.25rem;
+    color: var(--lightgray);
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 40px;
+    
+  }
+
+  .contact .contact-form {
+    align-items: center;
+  }
+
+  .contact .contact-form input,
+  .contact .contact-form textarea {
+    padding: 1rem 1.25rem;
+    margin-bottom: 20px;
+    width: 400px;
+  }
+  .contact .contact-form button {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    width: 200px;
+  }
+
+  /* Footer*/
+  .semi-Footer {
+    flex-direction: row;
+    margin: 0 0 30px 30px;
+  }
+  .Alkayan-section,
+  .contact-section,
+  .links-section,
+  .follow-section {
+    margin: 0 auto;
+    width: 280px;
+    margin-top: 30px;
+  }
+  .Alkayan-section h2,
+  .contact-section h2,
+  .links-section h2,
+  .follow-section h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .Alkayan-section p,
+  .contact-section p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    margin-right: 20px;
+  }
+  .contact-section span {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .links-section a {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .footer span {
+    font-size: 1.25rem;
+  }
+  .footer a {
+    font-size: 1.25rem;
+  }
+}
